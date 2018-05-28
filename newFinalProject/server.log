@@ -1,0 +1,13 @@
+Running BrowserMob Proxy using LittleProxy implementation. To revert to the legacy implementation, run the proxy with the command-line option '--use-littleproxy false'.
+[INFO  2018-05-28T08:36:51,805 net.lightbody.bmp.proxy.Main] (main) Starting BrowserMob Proxy version 2.1.4 
+[INFO  2018-05-28T08:36:51,836 org.eclipse.jetty.util.log] (main) jetty-7.x.y-SNAPSHOT 
+[INFO  2018-05-28T08:36:51,982 org.eclipse.jetty.util.log] (main) started o.e.j.s.ServletContextHandler{/,null} 
+[INFO  2018-05-28T08:36:52,109 org.eclipse.jetty.util.log] (main) Started SelectChannelConnector@0.0.0.0:8090 
+[INFO  2018-05-28T08:36:54,056 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (qtp24293395-18) Starting proxy at address: 0.0.0.0/0.0.0.0:8091 
+[INFO  2018-05-28T08:36:54,077 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (qtp24293395-18) Proxy listening with TCP transport 
+[INFO  2018-05-28T08:36:54,342 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (qtp24293395-18) Proxy started at address: /0:0:0:0:0:0:0:0:8091 
+[INFO  2018-05-28T08:37:01,898 org.littleshoot.proxy.impl.ClientToProxyConnection] (LittleProxy-0-ClientToProxyWorker-2) (NEGOTIATING_CONNECT) [id: 0xe8bf764e, L:/0:0:0:0:0:0:0:1:8091 - R:/0:0:0:0:0:0:0:1:54356]: An IOException occurred on ClientToProxyConnection: An established connection was aborted by the software in your host machine 
+[INFO  2018-05-28T08:37:01,900 org.littleshoot.proxy.impl.ProxyToServerConnection] (LittleProxy-0-ProxyToServerWorker-1) (HANDSHAKING) [id: 0xc825c7d5, L:0.0.0.0/0.0.0.0:54357 ! R:search.services.mozilla.com/52.88.190.126:443]: Connection to upstream server failed java.nio.channels.ClosedChannelException: null
+	at io.netty.handler.ssl.SslHandler.channelInactive(...)(Unknown Source) ~[browsermob-dist-2.1.4.jar:?]
+
+^C
